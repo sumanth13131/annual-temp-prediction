@@ -27,8 +27,10 @@ def index():
             t_2=list(y_hat[0])
         output=list(y_hat[0])
         month=['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT','NOV', 'DEC']
-        return render_template('index.html',month=month,temp=output)
+        return render_template('index.html',month=month,temp=output,y=year)
     return render_template('index.html',month=False,temp=False)
 if __name__ == "__main__":
     app.run(debug=True)
+    
+
     
