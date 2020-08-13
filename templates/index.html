@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Future-Temp</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+        body{
+          background-color:#0a0b1b;
+        }
+		table, th, td {
+  			border: 1px solid black;
+  			border-collapse: collapse;
+			border-color: antiquewhite;
+		}
+</style>
+</head>
+<body>
+	<div class="container  fileuploader " style="margin-top: 10%">
+		<div class="row justify-content-center">
+			<h1>Temperature Prediction (LSTM)</h1>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<form action="\" method="post">
+ 				 		 <div class="form-group">
+ 					  		 <label for="exampleFormControlSelect1" style="color: aliceblue;" >Select an Year</label>
+  								   <select name="year"class="form-control" id="exampleFormControlSelect1">
+     								 <option value="2018">2018</option>
+     								 <option value="2019">2019</option>
+     								 <option value="2020">2020</option>
+									 <option value="2021">2021</option>
+									 <option value="2022">2022</option>
+									 <option value="2023">2023</option>
+									 <option value="2024">2024</option>
+									 <option value="2025">2025</option>
+     								</select>
+  					  	</div>
+  					  	<input type="submit" value="predict" name="predict" class="btn btn-primary form-group">
+				  </form>
+				  
+  			</div>
+  		</div>
+  		</div>
+		</div>
+	</div>
+	<div class="container  fileuploader " style="margin-top: 2%">
+		<div class="row justify-content-center">
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<table style="width: 100%;">
+				{% if month != False %}
+					<tr style="color: aliceblue;font-weight: bold;
+					">
+						<th style="text-align: center;color: aliceblue;">Month</th>
+						<th style="text-align: center;color: aliceblue;">Temp(°C)</th> 
+				 	</tr>
+					{% for i in range(0,12) %}
+					<tr style="color: aliceblue;">
+						<td style="text-align: center;color: aliceblue;">{{month[i]}}</td>
+						<td style="text-align: center;color: aliceblue;">{{temp[i]}}</td>
+					</tr>
+					{%endfor%}
+				{% else %}
+					<p>Please select Year</p>
+				{% endif %}
+				</table>
+  			</div>
+  		</div>
+  		</div>
+		</div>
+	</div>
+
+	
+
+</body>
+</html>
