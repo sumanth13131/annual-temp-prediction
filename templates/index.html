@@ -3,7 +3,8 @@
 <head>
 	<title>Future-Temp</title>
 	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="https://img.icons8.com/nolan/64/temperature-sensitive.png" type="image/gif" sizes="16x16">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -40,7 +41,7 @@
 									 <option value="2025">2025</option>
      								</select>
   					  	</div>
-  					  	<input type="submit" value="predict" name="PREDICT" class="btn btn-primary form-group">
+  					  	<input type="submit" value="PREDICT" name="predict" class="btn btn-primary form-group">
 				  </form>
 				  
   			</div>
@@ -55,7 +56,7 @@
 			<div class="col-md-6">
 				<table style="width: 100%;">
 				{% if month != False %}
-					<h4 style="color: aliceblue;font-weight: bold;">&nbsp;&nbsp;&nbsp; Predicted India's {{y}} Temperature °C</h4>
+					<h4 style="color: aliceblue;font-weight: bold;">&nbsp; Predicted India's {{y}} Temperature °C</h4>
 					<tr style="color: aliceblue;font-weight: bold;">
 						<th style="text-align: center;color: aliceblue;">Month</th>
 						<th style="text-align: center;color: aliceblue;">Temp(°C)</th> 
@@ -70,6 +71,12 @@
 					<p>Please select Year</p>
 				{% endif %}
 				</table>
+				<!-- hitwebcounter Code START -->
+				<!--a href="https://www.hitwebcounter.com" target="_blank"-->
+				<br>
+				<p style="color: aliceblue;font-weight: bold;padding-left: 50%;">Visitor Number :: <img src="https://hitwebcounter.com/counter/counter.php?page=7649545&style=0013&nbdigits=5&type=page&initCount=0" title="Web Counter" Alt="counter free"   border="0" > </p>
+				
+				 
   			</div>
   		</div>
   		</div>
